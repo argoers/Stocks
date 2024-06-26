@@ -1,0 +1,33 @@
+<table *ngIf='showTable'>
+  <tr>
+    <th>Date</th>
+    <th>Bid</th>
+    <th>Ask</th>
+    <th>Opening Price</th>
+    <th>High Price</th>
+    <th>Low Price</th>
+    <th>Closing Price</th>
+    <th>Average Price</th>
+    <th>Total Volume</th>
+    <th>Trades</th>
+    <th>Turnover</th>
+  </tr>
+  <tr *ngFor="let day of dayInfo; let i = index">
+    <td>{{day.date}}</td>
+    <td>{{ day.bid }}</td>
+    <td>{{day.ask}}</td>
+    <td>{{day.openingPrice}}</td>
+    <td>{{day.highPrice}}</td>
+    <td>{{day.lowPrice}}</td>
+    <td>{{day.closingPrice}}</td>
+    <td>{{day.averagePrice}}</td>
+    <td>{{day.totalVolume}}</td>
+    <td>{{day.turnover}}</td>
+    <td>{{day.trades}}</td>
+  </tr>
+</table>
+
+<button (click)='toggleShowTable()'>Scan</button>
+
+
+<router-outlet />
